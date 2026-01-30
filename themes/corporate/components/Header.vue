@@ -1,15 +1,31 @@
+<script setup lang="ts">
+interface NavItem {
+  label: string;
+  path: string;
+}
+
+defineProps<{
+  siteName: string;
+  menu: NavItem[];
+}>();
+</script>
+
 <template>
   <header class="bg-primary text-white shadow-lg">
     <div class="container mx-auto px-4 py-6">
       <div class="flex items-center justify-between">
         <div class="flex items-center space-x-4">
-          <h1 class="text-2xl font-bold">Corporate Theme</h1>
+          <h1 class="text-2xl font-bold">{{ siteName }}</h1>
         </div>
         <nav class="hidden md:flex space-x-6">
-          <a href="#" class="hover:text-gray-200 transition-colors">Home</a>
-          <a href="#" class="hover:text-gray-200 transition-colors">About</a>
-          <a href="#" class="hover:text-gray-200 transition-colors">Services</a>
-          <a href="#" class="hover:text-gray-200 transition-colors">Contact</a>
+          <NuxtLink
+            v-for="item in menu"
+            :key="item.path"
+            :to="item.path"
+            class="hover:text-gray-200 transition-colors"
+          >
+            {{ item.label }}
+          </NuxtLink>
         </nav>
         <button class="md:hidden text-white">
           <svg
@@ -30,7 +46,3 @@
     </div>
   </header>
 </template>
-
-<script setup lang="ts">
-// Header component for corporate theme
-</script>

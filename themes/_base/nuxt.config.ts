@@ -6,5 +6,17 @@ export default defineNuxtConfig({
     exposeConfig: true,
   },
 
+  components: [
+    {
+      path: "templates",
+      prefix: "Theme", // Example: <ThemeHome />
+      global: true, // Crucial for dynamic component resolution
+    },
+    {
+      path: "components",
+      pathPrefix: false,
+    },
+  ],
+
   compatibilityDate: "2026-01-30",
 });

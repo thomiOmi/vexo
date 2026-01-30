@@ -8,4 +8,12 @@ export default withNuxt(
       "vue/multi-word-component-names": "off",
     },
   },
+  {
+    files: ["**/*.vue"],
+    languageOptions: {
+      parserOptions: {
+        parser: "@typescript-eslint/parser",
+      },
+    },
+  },
 );

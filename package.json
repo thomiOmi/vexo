@@ -6,6 +6,8 @@
   "scripts": {
     "build": "turbo run build",
     "dev": "turbo run dev",
+    "generate": "turbo run generate",
+    "postinstall": "turbo run postinstall",
     "lint": "turbo run lint",
     "lint:fix": "turbo run lint:fix"
   },
