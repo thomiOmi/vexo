@@ -12,12 +12,7 @@ const compat = new FlatCompat({
 const project = resolve(process.cwd(), "tsconfig.json");
 
 export default [
-  ...compat.extends(
-    "@nuxtjs/eslint-config-typescript",
-    // '@vercel/style-guide/eslint/node',
-    // '@vercel/style-guide/eslint/browser',
-    // 'turbo',
-  ),
+  // ...compat.extends("@nuxtjs/eslint-config-typescript"),
   {
     languageOptions: {
       parserOptions: {
