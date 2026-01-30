@@ -23,6 +23,7 @@ const mockSiteConfig: SiteConfig = {
     { label: "Home", path: "/" },
     { label: "About Us", path: "/about" },
     { label: "Services", path: "/services" },
+    { label: "Contact", path: "/contact" },
   ],
 };
 
@@ -38,6 +39,12 @@ const mockDb: Record<string, PageData> = {
     content: "This is Vexo.",
     layout: "default",
   },
+  "/contact": {
+    template: "Default",
+    title: "Contact Us",
+    content: "Get in touch with us at contact@vexo.com",
+    layout: "default",
+  },
 };
 
 export const useVexo = () => {
@@ -45,8 +52,8 @@ export const useVexo = () => {
     const data = mockDb[path];
     if (!data) {
       throw createError({
-        statusCode: 404,
-        statusMessage: "Page Not Found",
+        status: 404,
+        statusText: "Page Not Found",
       });
     }
     return data;

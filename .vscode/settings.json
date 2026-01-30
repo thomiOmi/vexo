@@ -5,11 +5,17 @@
     "*.vue": "vue",
     ".css": "tailwindcss"
   },
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": false,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit",
+    "source.organizeImports": "never"
+  },
+  "editor.defaultFormatter": "dbaeumer.vscode-eslint",
   "editor.gotoLocation.multipleDefinitions": "goto",
   "editor.quickSuggestions": {
     "strings": "on"
   },
+  "prettier.enable": false,
   "eslint.useFlatConfig": true,
   "eslint.format.enable": true,
   "eslint.validate": [
@@ -17,6 +23,23 @@
     "javascriptreact",
     "typescript",
     "typescriptreact",
-    "vue"
-  ]
+    "vue",
+    "html",
+    "markdown",
+    "json",
+    "jsonc",
+    "yaml",
+    "toml",
+    "xml",
+    "gql",
+    "graphql",
+    "astro",
+    "svelte",
+    "css",
+    "less",
+    "scss",
+    "pcss",
+    "postcss"
+  ],
+  "nuxtr.vueFiles.firstTag": "script"
 }

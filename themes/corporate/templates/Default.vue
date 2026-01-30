@@ -15,11 +15,13 @@ defineProps<{
         >
           {{ title }}
         </h1>
+        <!-- eslint-disable vue/no-v-html -->
         <div
           v-if="content"
           class="prose prose-lg max-w-none text-gray-700"
           v-html="content"
         />
+        <!-- eslint-enable vue/no-v-html -->
         <slot v-else />
       </article>
     </main>

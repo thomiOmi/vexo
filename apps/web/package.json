@@ -9,6 +9,7 @@
     "preview": "nuxt preview",
     "generate": "nuxt generate",
     "postinstall": "nuxt prepare",
+    "typecheck": "nuxt typecheck",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
   },
@@ -21,6 +22,7 @@
     "@nuxt/eslint": "^1.13.0",
     "@nuxtjs/tailwindcss": "^6.14.0",
     "eslint": "^9.39.2",
-    "typescript": "^5.9.3"
+    "typescript": "^5.9.3",
+    "vue-tsc": "^3.2.4"
   }
 }
