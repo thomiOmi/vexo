@@ -3,10 +3,18 @@
   "version": "0.0.0",
   "private": true,
   "type": "module",
+  "scripts": {
+    "postinstall": "nuxt prepare",
+    "lint": "eslint ."
+  },
   "dependencies": {
     "@vexo/base": "workspace:*"
   },
   "devDependencies": {
+    "@nuxt/eslint": "^1.13.0",
+    "eslint": "^9.39.2",
+    "eslint-config-custom": "workspace:*",
+    "nuxt": "^4.3.0",
     "tsconfig": "workspace:*"
   }
 }

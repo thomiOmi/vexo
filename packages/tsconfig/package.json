@@ -6,7 +6,12 @@
   "publishConfig": {
     "access": "public"
   },
+  "scripts": {
+    "lint": "eslint ."
+  },
   "devDependencies": {
-    "@vue/tsconfig": "^0.8.1"
+    "@vue/tsconfig": "^0.8.1",
+    "eslint": "^9.18.0",
+    "eslint-config-custom": "workspace:*"
   }
 }
