@@ -7,12 +7,14 @@ const themePath = `../../themes/${themeName}`;
 
 export default defineNuxtConfig({
   // Extend the selected theme layer dynamically
-  extends: [themePath],
-
-  modules: ["@nuxt/eslint"],
-
   compatibilityDate: "2026-01-30",
-
+  extends: [themePath],
+  modules: ["@nuxt/eslint"],
+  eslint: {
+    config: {
+      standalone: true,
+    }
+  },
   // Ensure proper alias resolution for monorepo layers
   alias: {
     "~": "./",

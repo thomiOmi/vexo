@@ -45,6 +45,12 @@ const mockDb: Record<string, PageData> = {
     content: "Get in touch with us at contact@vexo.com",
     layout: "default",
   },
+  "/services": {
+    template: "Default",
+    title: "Our Services",
+    content: "We offer top-notch CMS solutions.",
+    layout: "default",
+  },
 };
 
 export const useVexo = () => {

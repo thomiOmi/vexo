@@ -15,7 +15,9 @@ defineProps<{
     <div class="container mx-auto px-4 py-6">
       <div class="flex items-center justify-between">
         <div class="flex items-center space-x-4">
-          <h1 class="text-2xl font-bold">{{ siteName }}</h1>
+          <NuxtLink to="/" class="text-2xl font-bold">
+            {{ siteName }}
+          </NuxtLink>
         </div>
         <nav class="hidden md:flex space-x-6">
           <NuxtLink
