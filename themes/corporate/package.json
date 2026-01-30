@@ -1,0 +1,12 @@
+{
+  "name": "@vexo/theme-corporate",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "@vexo/base": "workspace:*"
+  },
+  "devDependencies": {
+    "tsconfig": "workspace:*"
+  }
+}
