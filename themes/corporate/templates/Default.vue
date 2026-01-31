@@ -1,7 +1,12 @@
 <script setup lang="ts">
+interface PageBlock {
+  type: string;
+  data: Record<string, unknown>;
+}
+
 defineProps<{
   title?: string;
-  content?: string;
+  blocks?: PageBlock[];
 }>();
 </script>
 
@@ -15,13 +20,10 @@ defineProps<{
         >
           {{ title }}
         </h1>
-        <!-- eslint-disable vue/no-v-html -->
-        <div
-          v-if="content"
-          class="prose prose-lg max-w-none text-gray-700"
-          v-html="content"
-        />
-        <!-- eslint-enable vue/no-v-html -->
+        
+        <div v-if="blocks && blocks.length">
+          <BlockRenderer :blocks="blocks" />
+        </div>
         <slot v-else />
       </article>
     </main>

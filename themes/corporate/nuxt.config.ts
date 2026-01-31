@@ -16,6 +16,11 @@ export default defineNuxtConfig({
       global: true,
     },
     {
+      path: join(currentDir, "components/blocks"),
+      prefix: "Block",
+      global: true,
+    },
+    {
       path: "components",
       pathPrefix: false,
     },
@@ -30,6 +35,12 @@ export default defineNuxtConfig({
           },
         },
       },
+    },
+  },
+
+  eslint: {
+    config: {
+      standalone: false,
     },
   },
 
